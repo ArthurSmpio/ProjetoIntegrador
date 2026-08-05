@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquecimento Sustentável da Piscina | Projeto Integrador CEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <span>Acessibilidade:</span>
+            <button id="btn-contrast" aria-label="Alternar alto contraste">Contrast Alto</button>
+            <button id="btn-font-increase" aria-label="Aumentar tamanho da fonte">A+</button>
+            <button id="btn-font-decrease" aria-label="Diminuir tamanho da fonte">A-</button>
+        </div>
+        <nav class="navbar">
+            <div class="logo">Piscina Sustentável CEP</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#optica">Tecnociência & Óptica</a></li>
+                <li><a href="#robotica">Robótica & Automação</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#impacto">Impacto Social</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1>Aquecimento Eficiente e Sustentável para a Piscina do CEP</h1>
+                <p>Uma solução tecnológica baseada em Óptica Aplicada e Automação com Robótica.</p>
+                <a href="#optica" class="btn-primary">Conhecer o Projeto</a>
+            </div>
+            <div class="image-placeholder hero-img">
+                [PLACEHOLDER DA IMAGEM: Render 3D ou foto conceitual da piscina do CEP com as placas de aquecimento solar instaladas no telhado]
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="optica" class="content-section">
+            <h2>Tecnociência & Óptica Aplicada</h2>
+            
+            <article class="topic">
+                <h3>1. Princípios de Absorção, Reflexão e Refração</h3>
+                <p>
+                    Para maximizar o aquecimento da água, os coletores solares utilizam materiais de alta 
+                    <strong>absorção de radiação</strong> térmica e baixa <strong>reflexão</strong>. Vidros especiais com alto índice 
+                    de <strong>refração</strong> são aplicados para criar o efeito estufa no interior da placa solar.
+                </p>
+                <div class="image-placeholder">
+                    [PLACEHOLDER DA IMAGEM: Diagrama explicativo mostrando os raios solares sofrendo refração no vidro da placa solar e absorção pela superfície negra coletora]
+                </div>
+            </article>
+
+            <article class="topic">
+                <h3>2. Analogia: Disco de Newton & Câmara Escura</h3>
+                <p>
+                    <strong>Disco de Newton:</strong> Demonstra que a luz branca é a soma de todas as cores. Para o aquecimento, 
+                    utilizamos materiais de cor preta no coletor, pois eles absorvem todos os comprimentos de onda da luz visível 
+                    em vez de refletificá-los, convertendo luz em calor com máxima eficiência.
+                </p>
+                <p>
+                    <strong>Câmara Escura:</strong> Assim como a câmara escura aprisiona a luz para formar uma imagem, a cobertura térmica 
+                    e as placas de aquecimento operam como armadilhas térmicas, retendo o calor acumulado sem deixá-lo dissipar para o ambiente.
+                </p>
+                <div class="grid-2-col">
+                    <div class="image-placeholder">
+                        [PLACEHOLDER DA IMAGEM: Ilustração do Disco de Newton demonstrando a absorção total de luz na cor preta vs reflexão]
+                    </div>
+                    <div class="image-placeholder">
+                        [PLACEHOLDER DA IMAGEM: Esquema comparativo entre o funcionamento de uma Câmara Escura e o efeito estufa da placa coletora]
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="robotica" class="content-section">
+            <h2>Robótica & Automação do Sistema</h2>
+            <p>
+                O controle de temperatura é realizado por uma rede de sensores e atuadores gerenciados por um microcontrolador (ex: Arduino / ESP32).
+            </p>
+
+            <div class="image-placeholder">
+                [PLACEHOLDER DA IMAGEM: Fluxograma de controle (Sensor de Temp. Piscina + Sensor Placa Solar -> Microcontrolador -> Bomba de Água / Valvula Solenoide)]
+            </div>
+
+            <div class="tech-cards">
+                <div class="card">
+                    <h3>Sensores</h3>
+                    <ul>
+                        <li><strong>Sensor DS18B20 (Temperatura da Água):</strong> Mede a temperatura atual da piscina.</li>
+                        <li><strong>Sensor NTC (Temperatura do Coletor):</strong> Mede a temperatura no interior da placa solar.</li>
+                        <li><strong>LDR (Luminosidade):</strong> Identifica a incidência solar no local.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Atuadores</h3>
+                    <ul>
+                        <li><strong>Bomba d'Água (Relé):</strong> Ativada apenas quando a placa solar estiver mais quente que a piscina.</li>
+                        <li><strong>Válvula Solenoide:</strong> Direciona o fluxo de água para a filtragem ou aquecimento.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="simulador" class="content-section interactive-section">
+            <h2>Simulador do Sistema de Aquecimento</h2>
+            <p>Ajuste os valores abaixo para testar a automação do aquecimento em tempo real:</p>
+
+            <div class="simulator-box">
+                <div class="control-group">
+                    <label for="temp-piscina">Temp. da Piscina (°C): <span id="val-piscina">22</span>°C</label>
+                    <input type="range" id="temp-piscina" min="15" max="35" value="22">
+                </div>
+
+                <div class="control-group">
+                    <label for="temp-placa">Temp. da Placa Solar (°C): <span id="val-placa">30</span>°C</label>
+                    <input type="range" id="temp-placa" min="15" max="60" value="30">
+                </div>
+
+                <div id="sim-result" class="status-display">
+                    Status da Bomba: <strong id="status-bomba">DESLIGADA</strong>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="impacto" class="content-section">
+            <h2>Inovação & Impacto Social</h2>
+            <p>
+                O projeto proposto reduz substancialmente o uso de energia elétrica tradicional ou gás para aquecimento da piscina do CEP, 
+                diminuindo a pegada de carbono da instituição e promovendo a conscientização ecológica na comunidade escolar.
+            </p>
+            <div class="image-placeholder">
+                [PLACEHOLDER DA IMAGEM: Infográfico comparativo de consumo de energia e emissão de CO2 antes e depois do projeto]
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Integrador — Colégio Estadual do Paraná (CEP)</p>
+        <p>Desenvolvido com foco em Sustentabilidade, Tecnociência e Acessibilidade Digital.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
