@@ -54,6 +54,40 @@ document.addEventListener('DOMContentLoaded', () => {
     sliderPiscina.addEventListener('input', atualizarSimulacao);
     sliderPlaca.addEventListener('input', atualizarSimulacao);
     
-    // Inicializar simulação
+    // Inicializar simulação de temperatura
     atualizarSimulacao();
+
+    // --- 3. LÓGICA DO SIMULADOR LED RGB ---
+    const rgbR = document.getElementById('rgb-r');
+    const rgbG = document.getElementById('rgb-g');
+    const rgbB = document.getElementById('rgb-b');
+    const valR = document.getElementById('val-r');
+    const valG = document.getElementById('val-g');
+    const valB = document.getElementById('val-b');
+    const rgbPreview = document.getElementById('rgb-preview');
+    const rgbCode = document.getElementById('rgb-code');
+
+    function atualizarRGB() {
+        const r = rgbR.value;
+        const g = rgbG.value;
+        const b = rgbB.value;
+
+        valR.textContent = r;
+        valG.textContent = g;
+        valB.textContent = b;
+
+        const colorStr = `rgb(${r}, ${g}, ${b})`;
+        rgbPreview.style.backgroundColor = colorStr;
+        rgbPreview.style.boxShadow = `0 0 20px ${colorStr}`;
+        rgbCode.textContent = colorStr;
+    }
+
+    if (rgbR && rgbG && rgbB) {
+        rgbR.addEventListener('input', atualizarRGB);
+        rgbG.addEventListener('input', atualizarRGB);
+        rgbB.addEventListener('input', atualizarRGB);
+        
+        // Inicializar simulador RGB
+        atualizarRGB();
+    }
 });
