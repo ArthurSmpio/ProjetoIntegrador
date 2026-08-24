@@ -20,6 +20,7 @@
             <ul class="nav-links">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#optica">Tecnociência & Óptica</a></li>
+                <li><a href="#led-rgb">LED RGB</a></li>
                 <li><a href="#robotica">Robótica & Automação</a></li>
                 <li><a href="#simulador">Simulador</a></li>
                 <li><a href="#impacto">Impacto Social</a></li>
@@ -76,6 +77,67 @@
                     </div>
                 </div>
             </article>
+        </section>
+
+        <hr>
+
+        <!-- NOVA SEÇÃO: LED RGB -->
+        <section id="led-rgb" class="content-section">
+            <h2>Estudo dos LEDs RGB (Red, Green, Blue)</h2>
+            <p>
+                Um LED RGB é um componente eletrônico que agrupa três LEDs em um único invólucro: um <strong>Vermelho (Red)</strong>, 
+                um <strong>Verde (Green)</strong> e um <strong>Azul (Blue)</strong>. Através da mistura dessas três cores primárias da luz, 
+                é possível gerar quase qualquer cor do espectro visível.
+            </p>
+
+            <div class="tech-cards">
+                <div class="card">
+                    <h3>Síntese Aditiva de Cor</h3>
+                    <p>
+                        Diferente das tintas (síntese subtrativa), a luz trabalha por <strong>adição</strong>. 
+                        Quando combinamos as três cores em potência máxima, obtemos a <strong>luz branca</strong>. 
+                        Misturas intermediárias geram cores secundárias como Amarelo (R+G), Ciano (G+B) e Magenta (R+B).
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Tipos e Controle PWM</h3>
+                    <p>
+                        Os LEDs RGB dividem-se em <strong>Anodo Comum</strong> (pino positivo compartilhado) e <strong>Catodo Comum</strong> (pino negativo compartilhado). 
+                        Para controlar a intensidade de cada cor em microcontroladores (como Arduino), utiliza-se o sinal <strong>PWM (Pulse Width Modulation)</strong>, 
+                        variando o brilho individual de 0 a 255.
+                    </p>
+                </div>
+            </div>
+
+            <div class="image-placeholder">
+                [PLACEHOLDER DA IMAGEM: Esquema do pino de um LED RGB (Anodo/Catodo comum) e diagrama de Venn mostrando a sobreposição das luzes Vermelha, Verde e Azul criando a luz Branca]
+            </div>
+
+            <!-- Interatividade do LED RGB -->
+            <div class="simulator-box rgb-simulator">
+                <h3>Simulador Interativo de Mistura RGB</h3>
+                <p>Ajuste os canais R, G e B para visualizar a cor resultante do LED:</p>
+                
+                <div class="control-group">
+                    <label for="rgb-r">Vermelho (R): <span id="val-r">255</span></label>
+                    <input type="range" id="rgb-r" min="0" max="255" value="255">
+                </div>
+
+                <div class="control-group">
+                    <label for="rgb-g">Verde (G): <span id="val-g">0</span></label>
+                    <input type="range" id="rgb-g" min="0" max="255" value="0">
+                </div>
+
+                <div class="control-group">
+                    <label for="rgb-b">Azul (B): <span id="val-b">0</span></label>
+                    <input type="range" id="rgb-b" min="0" max="255" value="0">
+                </div>
+
+                <div class="rgb-preview-container">
+                    <div id="rgb-preview" class="rgb-preview"></div>
+                    <p id="rgb-code" class="rgb-code">rgb(255, 0, 0)</p>
+                </div>
+            </div>
         </section>
 
         <hr>
